@@ -30,3 +30,4 @@ jobs:
           npm run layer0:deploy -- ${{'--branch=$BRANCH_NAME' || ''}} --token=$deploy_token ${{env.BRANCH_NAME != 'master' && '--environment=staging' || ''}}
         env:
           deploy_token: ${{secrets.LAYER0_DEPLOY_TOKEN}}
+          PREVIEW_LAYER0_DEVTOOLS_ENABLED: false
